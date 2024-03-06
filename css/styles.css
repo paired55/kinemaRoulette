@@ -1,0 +1,83 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	height: 100svh;
+	width: 100svw;
+	font-family: 'Roboto', 'Quicksand', Arial, Helvetica, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#wrapper {
+	width: 80%;
+	height: 80%;
+	padding: 2rem;
+	background-color: #191919;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#title {
+	color: white;
+	font-style: italic;
+	font-size: 3rem;
+	font-weight: 300;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	padding: 2rem;
+}
+
+/* Button Styles */
+
+#rollButtonDiv {
+	position: absolute;
+	padding: 2rem;
+}
+
+#roll {
+	font-family: 'Quicksand';
+	padding: 0.8em 1.8em;
+	border: 2px solid #17c3b2;
+	position: relative;
+	overflow: hidden;
+	background-color: transparent;
+	text-align: center;
+	font-weight: 900;
+	font-size: 3rem;
+	transition: 0.3s;
+	z-index: 1;
+	font-family: inherit;
+	color: #17c3b2;
+	border-radius: 15px;
+}
+
+#roll::before {
+	content: '';
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	background: #17c3b2;
+	transition: 0.5s ease;
+	display: block;
+	z-index: -1;
+}
+
+#roll:hover::before {
+	width: 105%;
+}
+
+#roll:hover {
+	color: #111;
+}
